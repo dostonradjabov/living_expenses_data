@@ -10,7 +10,12 @@ def get_data(file_path: str) -> dict:
     Returns:
         dict: dictionary of data
     """
-    pass
+    f = open(file_path).read()
+    d =json.dumps(f)
+    t = 0
+    for i in d:
+        t+=i[1]
+    return t
 
 
 # test
